@@ -57,7 +57,7 @@ export default function DeveloperDashboard() {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card className="border-l-4 border-l-blue-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Open Tasks</CardTitle>
             <AlertCircle className="h-4 w-4 text-blue-500" />
@@ -67,7 +67,7 @@ export default function DeveloperDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-orange-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">In Progress</CardTitle>
             <Clock className="h-4 w-4 text-orange-500" />
@@ -77,7 +77,7 @@ export default function DeveloperDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-yellow-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Pending Approval</CardTitle>
             <Bug className="h-4 w-4 text-yellow-500" />
@@ -87,7 +87,7 @@ export default function DeveloperDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-green-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Completed</CardTitle>
             <CheckCircle className="h-4 w-4 text-green-500" />

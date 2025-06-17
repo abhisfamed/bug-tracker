@@ -42,7 +42,7 @@ export default function LoginPage() {
             </div>
           </div>
           <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Bug Tracker Pro
+            Bug Tracker 
           </CardTitle>
           <CardDescription>
             Sign in to your account to manage tasks and bugs

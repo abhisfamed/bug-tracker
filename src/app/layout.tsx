@@ -7,7 +7,7 @@ import { TaskProvider } from "../contexts/TaskContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bug Tracker Pro",
+  title: "Bug Tracker",
   description: "Professional bug and task tracking application",
 };
 

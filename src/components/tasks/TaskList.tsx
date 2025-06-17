@@ -69,7 +69,6 @@ export default function TaskList({ tasks, userRole }: TaskListProps) {
 
   return (
     <div className="space-y-6">
-      {/* Filters */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">
@@ -130,7 +129,6 @@ export default function TaskList({ tasks, userRole }: TaskListProps) {
         </CardContent>
       </Card>
 
-      {/* Tasks */}
       <div className="space-y-4">
         {filteredTasks.length === 0 ? (
           <Card>

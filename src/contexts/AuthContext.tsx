@@ -19,8 +19,8 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 const mockUsers: User[] = [
-  { id: '1', name: 'John Developer', email: 'dev@example.com', role: 'developer' },
-  { id: '2', name: 'Jane Manager', email: 'manager@example.com', role: 'manager' },
+  { id: '1', name: 'Abhishek Developer', email: 'dev@example.com', role: 'developer' },
+  { id: '2', name: 'Madni Manager', email: 'manager@example.com', role: 'manager' },
   { id: '3', name: 'Bob Developer', email: 'bob@example.com', role: 'developer' },
 ]
 
@@ -29,7 +29,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Check for stored user on app load
     const storedUser = localStorage.getItem('user')
     if (storedUser) {
       setUser(JSON.parse(storedUser))
@@ -38,7 +37,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const login = async (email: string, password: string): Promise<boolean> => {
-    // Mock authentication - in production, this would be an API call
     const foundUser = mockUsers.find(u => u.email === email)
     if (foundUser && password === 'password') {
       setUser(foundUser)

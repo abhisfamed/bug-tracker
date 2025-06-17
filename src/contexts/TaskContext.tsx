@@ -17,8 +17,8 @@ export interface Task {
   updatedAt: Date
   dueDate?: Date
   tags: string[]
-  timeSpent: number // in minutes
-  estimatedTime?: number // in minutes
+  timeSpent: number 
+  estimatedTime?: number 
 }
 
 export interface TimeEntry {
@@ -26,7 +26,7 @@ export interface TimeEntry {
   taskId: string
   userId: string
   userName: string
-  duration: number // in minutes
+  duration: number 
   description: string
   date: Date
 }
@@ -45,8 +45,6 @@ interface TaskContextType {
 }
 
 const TaskContext = createContext<TaskContextType | undefined>(undefined)
-
-// Mock data
 const mockTasks: Task[] = [
   {
     id: '1',
@@ -55,9 +53,9 @@ const mockTasks: Task[] = [
     priority: 'high',
     status: 'in-progress',
     assignee: '1',
-    assigneeName: 'John Developer',
+    assigneeName: 'Abhishek Developer',
     reporter: '2',
-    reporterName: 'Jane Manager',
+    reporterName: 'Madni Manager',
     createdAt: new Date('2024-01-15'),
     updatedAt: new Date('2024-01-16'),
     dueDate: new Date('2024-01-20'),
@@ -74,7 +72,7 @@ const mockTasks: Task[] = [
     assignee: '3',
     assigneeName: 'Bob Developer',
     reporter: '2',
-    reporterName: 'Jane Manager',
+    reporterName: 'Madni Manager',
     createdAt: new Date('2024-01-14'),
     updatedAt: new Date('2024-01-14'),
     dueDate: new Date('2024-01-25'),
@@ -89,9 +87,9 @@ const mockTasks: Task[] = [
     priority: 'critical',
     status: 'pending-approval',
     assignee: '1',
-    assigneeName: 'John Developer',
+    assigneeName: 'Abhishek Developer',
     reporter: '2',
-    reporterName: 'Jane Manager',
+    reporterName: 'Madni Manager',
     createdAt: new Date('2024-01-10'),
     updatedAt: new Date('2024-01-17'),
     tags: ['performance', 'database'],
@@ -105,7 +103,7 @@ const mockTimeEntries: TimeEntry[] = [
     id: '1',
     taskId: '1',
     userId: '1',
-    userName: 'John Developer',
+    userName: 'Abhishek Developer',
     duration: 120,
     description: 'Investigated authentication flow',
     date: new Date('2024-01-16')
@@ -123,7 +121,7 @@ const mockTimeEntries: TimeEntry[] = [
     id: '3',
     taskId: '3',
     userId: '1',
-    userName: 'John Developer',
+    userName: 'Abhishek Developer',
     duration: 360,
     description: 'Database query optimization',
     date: new Date('2024-01-17')
@@ -165,7 +163,7 @@ export function TaskProvider({ children }: { children: React.ReactNode }) {
     }
     setTimeEntries(prev => [...prev, newEntry])
     
-    // Update task time spent
+    
     const totalTime = [...timeEntries, newEntry]
       .filter(entry => entry.taskId === entryData.taskId)
       .reduce((sum, entry) => sum + entry.duration, 0)

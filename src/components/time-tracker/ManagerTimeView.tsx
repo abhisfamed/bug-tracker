@@ -15,7 +15,6 @@ export default function ManagerTimeView() {
     return `${hours}h ${mins}m`
   }
 
-  // Group time entries by user
   const timeByUser = timeEntries.reduce((acc, entry) => {
     if (!acc[entry.userId]) {
       acc[entry.userId] = {
@@ -29,7 +28,6 @@ export default function ManagerTimeView() {
     return acc
   }, {} as Record<string, { userName: string; totalTime: number; taskCount: Set<string> }>)
 
-  // Convert Set to count
   const userStats = Object.entries(timeByUser).map(([userId, data]) => ({
     userId,
     userName: data.userName,
@@ -37,7 +35,6 @@ export default function ManagerTimeView() {
     taskCount: data.taskCount.size
   }))
 
-  // Task time analysis
   const taskTimeAnalysis = tasks.map(task => {
     const taskEntries = timeEntries.filter(entry => entry.taskId === task.id)
     const totalTime = taskEntries.reduce((sum, entry) => sum + entry.duration, 0)
@@ -74,7 +71,6 @@ export default function ManagerTimeView() {
 
   return (
     <div className="space-y-6">
-      {/* User Time Statistics */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">
@@ -108,8 +104,7 @@ export default function ManagerTimeView() {
           </div>
         </CardContent>
       </Card>
-
-      {/* Task Time Analysis */}
+      
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">
@@ -167,8 +162,6 @@ export default function ManagerTimeView() {
           </div>
         </CardContent>
       </Card>
-
-      {/* Time Insights */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">

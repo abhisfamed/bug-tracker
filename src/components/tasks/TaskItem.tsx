@@ -146,8 +146,7 @@ export default function TaskItem({ task, userRole }: TaskItemProps) {
               </div>
             )}
           </div>
-
-          {/* Time Progress */}
+          
           {task.estimatedTime && (
             <div className="mb-4">
               <div className="flex justify-between items-center mb-2">
@@ -159,8 +158,7 @@ export default function TaskItem({ task, userRole }: TaskItemProps) {
               <Progress value={progressPercentage} className="h-2" />
             </div>
           )}
-
-          {/* Action Buttons */}
+          
           <div className="flex flex-wrap gap-2">
             {canClose && (
               <Button 

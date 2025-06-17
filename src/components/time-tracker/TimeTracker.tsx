@@ -50,7 +50,6 @@ export default function TimeTracker() {
 
   return (
     <div className="space-y-6">
-      {/* Time Entry Form */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">
@@ -109,8 +108,6 @@ export default function TimeTracker() {
           </form>
         </CardContent>
       </Card>
-
-      {/* Task Time Summary */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">

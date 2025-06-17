@@ -23,7 +23,6 @@ export default function ManagerDashboard() {
 
   return (
     <div className="container mx-auto p-6">
-      {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -43,9 +42,8 @@ export default function ManagerDashboard() {
         </div>
       </div>
 
-      {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-        <Card className="border-l-4 border-l-blue-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Tasks</CardTitle>
             <Users className="h-4 w-4 text-blue-500" />
@@ -55,7 +53,7 @@ export default function ManagerDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-orange-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Open</CardTitle>
             <AlertCircle className="h-4 w-4 text-orange-500" />
@@ -65,7 +63,7 @@ export default function ManagerDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-purple-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">In Progress</CardTitle>
             <Clock className="h-4 w-4 text-purple-500" />
@@ -75,7 +73,7 @@ export default function ManagerDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-yellow-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Pending Approval</CardTitle>
             <Bug className="h-4 w-4 text-yellow-500" />
@@ -85,7 +83,7 @@ export default function ManagerDashboard() {
           </CardContent>
         </Card>
         
-        <Card className="border-l-4 border-l-green-500">
+        <Card className="border-l-4 border-l-500">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Completed</CardTitle>
             <CheckCircle className="h-4 w-4 text-green-500" />
@@ -95,13 +93,11 @@ export default function ManagerDashboard() {
           </CardContent>
         </Card>
       </div>
-
-      {/* Trend Chart */}
+      
       <div className="mb-8">
         <TaskTrendChart />
       </div>
 
-      {/* Main Content */}
       <Tabs defaultValue="all-tasks" className="space-y-6">
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="all-tasks">All Tasks</TabsTrigger>
@@ -124,7 +120,7 @@ export default function ManagerDashboard() {
         </TabsContent>
       </Tabs>
 
-      {/* Task Form Modal */}
+      
       {showTaskForm && (
         <TaskForm onClose={() => setShowTaskForm(false)} />
       )}

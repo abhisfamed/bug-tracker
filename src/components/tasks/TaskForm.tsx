@@ -19,8 +19,8 @@ interface TaskFormProps {
 }
 
 const mockUsers = [
-  { id: '1', name: 'John Developer' },
-  { id: '2', name: 'Jane Manager' },
+  { id: '1', name: 'Abhishek Developer' },
+  { id: '2', name: 'Madni Manager' },
   { id: '3', name: 'Bob Developer' },
 ]
 
